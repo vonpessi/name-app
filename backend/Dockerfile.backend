@@ -1,0 +1,10 @@
+FROM node:12
+
+WORKDIR /usr/src/app
+#avoid re-caching each build
+RUN npm install koa
+RUN npm i koa-router
+RUN npm install @koa/cors
+COPY . .
+
+CMD [ "node", "index.js" ]

@@ -1,0 +1,25 @@
+version: '3.4'
+services:
+    backend:
+        image: name-app-backend:latest
+        container_name: name-app-backend
+        build:
+            dockerfile: Dockerfile.backend
+            context: ./backend
+        ports:
+            - "8000:8000"
+        volumes:
+        - ./backend/src:/usr/src/app/src
+
+    frontend:
+        image: name-app-frontend:latest
+        container_name: name-app-frontend
+        build:
+            dockerfile: Dockerfile.frontend
+            context: ./frontend
+        ports:
+            - "3000:3000"
+        volumes:
+        - ./frontend/src:/usr/src/app/src
+        depends_on:
+            - backend
