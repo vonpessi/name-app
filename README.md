@@ -12,7 +12,7 @@ Tested with the Chrome web browser.
 ## Getting started
 Clone or download this repository
 ```
-git clone hhttps://github.com/vonpessi/name-app.git
+git clone https://github.com/vonpessi/name-app.git
 ```
 ### Prerequisites
 https://docs.docker.com/compose/install/<br />
